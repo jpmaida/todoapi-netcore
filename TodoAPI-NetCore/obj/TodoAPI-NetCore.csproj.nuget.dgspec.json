@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jogoncal/Documents/git/todoapi-netcore/TodoAPI-NetCore/TodoAPI-NetCore.csproj": {}
+  },
+  "projects": {
+    "/Users/jogoncal/Documents/git/todoapi-netcore/TodoAPI-NetCore/TodoAPI-NetCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jogoncal/Documents/git/todoapi-netcore/TodoAPI-NetCore/TodoAPI-NetCore.csproj",
+        "projectName": "TodoAPI-NetCore",
+        "projectPath": "/Users/jogoncal/Documents/git/todoapi-netcore/TodoAPI-NetCore/TodoAPI-NetCore.csproj",
+        "packagesPath": "/Users/jogoncal/.nuget/packages/",
+        "outputPath": "/Users/jogoncal/Documents/git/todoapi-netcore/TodoAPI-NetCore/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jogoncal/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

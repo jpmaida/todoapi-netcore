@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{50624D95-87F5-441B-93C6-525C1BF5227F}|TodoAPI_NetCore">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TodoAPI-NetCore" expanded="True" selected="True">
+            <Node name="TodoAPI-NetCore" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.TodoAPI-NetCore PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
