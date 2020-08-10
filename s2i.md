@@ -4,8 +4,10 @@ Used image: https://catalog.redhat.com/software/containers/dotnet/dotnet-31-rhel
 API creation steps: https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio
 
 ## Login and new project
+```
 oc login https://openshift.detrandf.lab.rdu2.cee.redhat.com:443
 oc new-project netcore-s2i-poc --display-name=".Net Core s2i POC"
+```
 
 ## S2I
 oc new-build --name=todo-api --image-stream=dotnet-31-rhel7:latest --binary -n netcore-s2i-poc
