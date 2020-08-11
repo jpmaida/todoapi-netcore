@@ -96,7 +96,7 @@ objects:
         app: "${APPLICATION_NAME}"
       name: "${APPLICATION_NAME}"
     spec:
-      host: "${APPLICATION_NAME}-${PROJECT_NAME}.apps.detrandf.lab.rdu2.cee.redhat.com"
+      host: "${APPLICATION_NAME}-${PROJECT_NAME}.${HOSTNAME}"
       port:
         targetPort: 8080-tcp
       to:
@@ -112,3 +112,5 @@ parameters:
   - name: REPLICAS_COUNT
     displayName: Number of replicas
     value: "1"
+  - name: HOSTNAME
+    displayName: Cluster's hostname
