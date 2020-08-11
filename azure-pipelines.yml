@@ -1,4 +1,10 @@
 # Starter pipeline
+- task: oc-cmd@2
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'openshift-3.11-opentlc'
+    version: 'v3.11.0'
+    cmd: 'oc projects'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
