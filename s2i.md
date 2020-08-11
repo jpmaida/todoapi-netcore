@@ -11,7 +11,7 @@ oc new-project netcore-s2i-poc --display-name=".Net Core s2i POC"
 
 ## S2I
 ```
-oc new-build --name=todo-api --image-stream=dotnet-31-rhel7:latest --binary -n netcore-s2i-poc
+oc new-build --name=todo-api --image-stream=netcore-s2i-poc/dotnet-31-rhel7:latest --binary -n netcore-s2i-poc
 oc start-build todo-api --from-dir=bin/Debug/netcoreapp3.1/ --wait --follow -n netcore-s2i-poc
 ```
 
