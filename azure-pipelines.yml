@@ -24,6 +24,6 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-3.11-opentlc'
     version: 'v3.11.0'
-    cmd: 'oc get -n netcore-s2i-poc'
+    cmd: 'oc get buildconfigs -n netcore-s2i-poc'
     condition: 'exists'
-    resource: 'bc/todo-api'
+    resource: 'buildconfigs/todo-api'
