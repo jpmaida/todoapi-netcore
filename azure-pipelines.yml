@@ -9,7 +9,9 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'pwd'
+    script: |
+      pwd
+      ls -l
 - task: oc-cmd@2
   displayName: 'Build OCP'
   inputs:
@@ -22,6 +24,6 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-3.11-opentlc'
     version: 'v3.11.0'
-    cmd: 'oc get bc/todo-api -n netcore-s2i-poc'
+    cmd: 'oc get -n netcore-s2i-poc'
     condition: 'exists'
-    resource: 'todo-api'
+    resource: 'bc/todo-api'
