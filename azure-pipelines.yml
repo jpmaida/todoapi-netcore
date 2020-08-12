@@ -13,7 +13,7 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-3.11-opentlc'
     version: 'v3.11.0'
-    cmd: |
+    cmd: >-
       oc get bc -n netcore-s2i-poc
       oc get is -n netcore-s2i-poc
 - task: OcConditionalCmd@2
@@ -21,6 +21,6 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-3.11-opentlc'
     version: 'v3.11.0'
-    cmd: 'oc get bc -n netcore-s2i-poc'
+    cmd: 'oc get bc/todo-api -n netcore-s2i-poc'
     condition: 'exists'
-    resource: 'todo-api'
+    resource: 'bc/todo-api'
