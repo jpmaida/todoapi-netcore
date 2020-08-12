@@ -7,6 +7,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: 'pwd'
 - task: oc-cmd@2
   displayName: 'Build OCP'
   inputs:
