@@ -7,12 +7,11 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - task: oc-cmd@2
+  displayName: 'Build OCP'
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-3.11-opentlc'
     version: 'v3.11.0'
-    cmd: 'oc projects'
+    cmd: >-
+      ''
