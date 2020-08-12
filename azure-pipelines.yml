@@ -12,13 +12,6 @@ steps:
     script: |
       pwd
       ls -l
-- task: oc-cmd@2
-  displayName: 'Build OCP'
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'openshift-3.11-opentlc'
-    version: 'v3.11.0'
-    cmd: oc get bc -n netcore-s2i-poc
 - task: OcConditionalCmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
@@ -26,4 +19,11 @@ steps:
     version: 'v3.11.0'
     cmd: 'oc get buildconfigs -n netcore-s2i-poc'
     condition: 'exists'
-    resource: 'buildconfigs/todo-api'
+    resource: 'buildconfigs/xxx'
+- task: oc-cmd@2
+  displayName: 'Start OCP build'
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'openshift-3.11-opentlc'
+    version: 'v3.11.0'
+    cmd: 'oc start-build todo-api --from-dir=TodoAPI-NetCore/bin/Debug/netcoreapp3.1/ --wait --follow -n netcore-s2i-poc'
