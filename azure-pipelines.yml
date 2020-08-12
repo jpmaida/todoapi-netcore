@@ -17,13 +17,13 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-3.11-opentlc'
     version: 'v3.11.0'
-    cmd: 'oc get buildconfigs -n netcore-s2i-poc'
+    cmd: 'oc get buildconfigs -n $(PROJECT_NAME)'
     condition: 'exists'
-    resource: 'buildconfigs/todo-api'
+    resource: 'buildconfigs/$(APPLICATION_NAME)'
 - task: oc-cmd@2
   displayName: 'Start OCP build'
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-3.11-opentlc'
     version: 'v3.11.0'
-    cmd: 'oc start-build todo-api --from-dir=/home/vsts/work/1/s/TodoAPI-NetCore/bin/Debug/netcoreapp3.1/ --wait --follow -n netcore-s2i-poc'
+    cmd: 'oc start-build $(APPLICATION_NAME) --from-dir=/home/vsts/work/1/s/TodoAPI-NetCore/bin/Debug/netcoreapp3.1/ --wait --follow -n $(PROJECT_NAME)'
