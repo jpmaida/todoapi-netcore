@@ -19,7 +19,7 @@ steps:
     version: 'v3.11.0'
     cmd: 'oc get buildconfigs -n netcore-s2i-poc'
     condition: 'exists'
-    resource: 'buildconfigs/xxx'
+    resource: 'buildconfigs/todo-api'
 - task: oc-cmd@2
   displayName: 'Start OCP build'
   inputs:
